@@ -1,0 +1,362 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-image: url(assets/images/overlay.png), url(assets/images/bg.jpg);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100% 100%;
+  background-attachment: fixed;
+}
+
+.home,
+.work,
+.contact {
+  box-shadow: 5px 5px 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-template-rows: 15vh auto auto;
+  grid-template-columns: 60%;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+/* Navbar */
+.nav {
+  grid-area: header;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  /* margin-bottom: 5vh; */
+}
+
+.nav-list li {
+  list-style: none;
+}
+
+.nav-list li:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.nav-list li a i {
+  color: rgb(256, 256, 256, 0.5);
+  font-size: 3.3rem;
+}
+
+.nav-list li a i:hover {
+  color: white;
+}
+
+/* Home */
+.home {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 60% auto;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.left .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  background-color: white;
+  padding-left: 3.3rem;
+}
+
+.left .text h1 {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: lighter;
+}
+
+.left .text p {
+  margin-top: 0.5em;
+  font-size: 1.9rem;
+  color: #aaa;
+  font-weight: lighter;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Works */
+.work {
+  grid-area: content;
+  box-sizing: border-box;
+  padding: 3rem;
+  background-color: white;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 5vh auto;
+  gap: 3rem;
+}
+
+.work header {
+  height: 100%;
+}
+
+.work .title {
+  margin-top: 10px;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.work .grid-projects {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.card-container {
+  position: relative;
+}
+
+.card-container img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.hover-content {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.card-container:hover .img {
+  opacity: 0.3;
+}
+
+.card-container:hover .hover-content {
+  opacity: 1;
+}
+
+.hover-content .icons {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background-color: rgba(256, 256, 256, 0.8);
+}
+
+.hover-content .icons a img {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* Contact */
+.contact {
+  grid-area: content;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 6rem auto;
+  height: 100%;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.contact .title {
+  margin: 20px 0;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.contact .form {
+  display: grid;
+  grid-template-rows: 4rem auto 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  height: 100%;
+}
+
+.contact .form textarea {
+  height: auto;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #f4f4f4;
+  border: 0;
+  padding-left: 0.75rem;
+  padding-top: 0.75rem;
+  font-size: 15pt;
+  box-sizing: border-box;
+}
+
+.contact .form input {
+  width: 100%;
+  height: 4rem;
+  border: none;
+  background-color: #f4f4f4;
+  padding-left: 0.75rem;
+  font-size: 15pt;
+  box-sizing: border-box;
+}
+
+.contact .form button {
+  width: 50%;
+  height: 100%;
+  color: white;
+  background-color: #222222;
+  font-size: 1.2rem;
+  border: none;
+  font-weight: lighter;
+}
+
+.contact .form button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  width: 100%;
+  height: 100%;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.social-media li {
+  list-style: none;
+}
+
+.social-media li:not(:last-child) {
+  border-right: 1px inset rgba(255, 255, 255, 0.45);
+  margin-right: 2rem;
+  padding-right: 2rem;
+}
+
+.social-media li a img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Media Queries */
+/* Small devices (landscape phones) */
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+  .container {
+    grid-template-columns: 90%;
+  }
+  .home {
+    grid-template-columns: 40% auto;
+  }
+  .home .left .text {
+    padding-left: 1rem;
+  }
+  .home .left .text h1 {
+    font-size: 2rem;
+  }
+  .home .left .text p {
+    font-size: 1.5rem;
+  }
+  .work {
+    padding: 2rem;
+  }
+  .work .title {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+  }
+  /* .work .grid-projects {
+    grid-gap: 4%;
+  } */
+  .contact .form {
+    grid-template-rows: 4rem auto 4rem;
+  }
+  .contact .title {
+    font-size: 2.5rem;
+  }
+  .contact .form div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .contact .form button {
+    width: 100%;
+  }
+}
+
+/* Medimum devices */
+@media (min-width: 576px) and (max-width: 1100px) {
+  html {
+    font-size: 15px;
+  }
+  .home {
+    grid-template-columns: 50% auto;
+  }
+  .home .left .text {
+    padding-left: 1rem;
+  }
+  .home .left .text h1 {
+    font-size: 2.5rem;
+  }
+  .home .left .text p {
+    font-size: 1.5rem;
+  }
+  .work .title {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+  }
+  .work .grid-projects {
+    grid-gap: 1rem;
+  }
+  .work .grid-projects .card-container .hover-content .icons a img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .contact .form div {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .contact .form button {
+    width: 100%;
+  }
+}

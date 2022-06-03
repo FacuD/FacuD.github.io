@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/f74bf886d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Alert Button Library -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Email Api -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li>
+            <a href="#"><i id="home" class="fa-solid fa-house-chimney"></i></a>
+          </li>
+          <li>
+            <a href="#"><i id="work" class="fa-solid fa-folder"></i></a>
+          </li>
+          <li>
+            <a href="#"><i id="contact" class="fa-solid fa-envelope"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Home -->
+      <section class="home">
+        <article class="left">
+          <header class="text">
+            <h1>Facundo Docampo</h1>
+            <p>Systems Engineer Student</p>
+          </header>
+        </article>
+        <aside class="right">
+          <picture>
+            <img
+              loading="lazy"
+              src="assets/images/myself.jpg"
+              alt="picture of myself"
+            />
+          </picture>
+        </aside>
+      </section>
+
+      <!-- Work -->
+      <section class="work hidden">
+        <header>
+          <h2 class="title">Projects</h2>
+        </header>
+        <section class="grid-projects">
+          <div class="card-container">
+            <img
+              loading="lazy"
+              src="./assets/images/movies-app.png"
+              alt="movies app sample image"
+            />
+            <div class="hover-content">
+              <div class="icons">
+                <a href="https://github.com/FacuD/movies-react" target="_blank"
+                  ><img src="assets/images/github_icon.png" alt="github icon"
+                /></a>
+                <a
+                  href="https://movies-react-tmdb.herokuapp.com"
+                  target="_blank"
+                  ><img
+                    src="assets/images/red-mundial.png"
+                    alt="link to the website icon"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-container">
+            <img
+              loading="lazy"
+              src="./assets/images/todo-list.png"
+              alt="TODO list app sample image"
+            />
+            <div class="hover-content">
+              <div class="icons">
+                <a href="https://github.com/FacuD/TODO-List" target="_blank"
+                  ><img src="assets/images/github_icon.png" alt="github icon"
+                /></a>
+                <a href="https://facud-todo-list.netlify.app" target="_blank"
+                  ><img
+                    src="assets/images/red-mundial.png"
+                    alt="link to the website icon"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-container">
+            <img
+              loading="lazy"
+              src="./assets/images/snake-game.png"
+              alt="snake game sample image"
+            />
+            <div class="hover-content">
+              <div class="icons">
+                <a href="https://github.com/FacuD/snake-game" target="_blank"
+                  ><img src="assets/images/github_icon.png" alt="github icon"
+                /></a>
+                <a href="https://facud-snake-game.netlify.app" target="_blank"
+                  ><img
+                    src="assets/images/red-mundial.png"
+                    alt="link to the website icon"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-container">
+            <img
+              loading="lazy"
+              src="./assets/images/tic-tac-toe.png"
+              alt="tic tac toe game sample image"
+            />
+            <div class="hover-content">
+              <div class="icons">
+                <a
+                  href="https://github.com/FacuD/tic-tac-toe-react"
+                  target="_blank"
+                  ><img src="assets/images/github_icon.png" alt="github icon"
+                /></a>
+                <a
+                  href="https://facud-tic-tac-toe-app.herokuapp.com"
+                  target="_blank"
+                  ><img
+                    src="assets/images/red-mundial.png"
+                    alt="link to the website icon"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-container">
+            <img
+              loading="lazy"
+              src="./assets/images/hangman.png"
+              alt="tic tac toe game sample image"
+            />
+            <div class="hover-content">
+              <div class="icons">
+                <a href="https://github.com/FacuD/hangman-game" target="_blank"
+                  ><img src="assets/images/github_icon.png" alt="github icon"
+                /></a>
+                <a href="https://facud-hangman-game.netlify.app" target="_blank"
+                  ><img
+                    src="assets/images/red-mundial.png"
+                    alt="link to the website icon"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Contact Me -->
+      <section class="contact hidden">
+        <header>
+          <h2 class="title">Contact Me</h2>
+        </header>
+        <div>
+          <form action="" class="form" id="form">
+            <input type="text" placeholder="Name" name="name" />
+            <input type="email" placeholder="Email" name="email" />
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+            <div>
+              <button type="submit">
+                <span>Send</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <ul class="social-media">
+          <li>
+            <a href="https://github.com/FacuD" target="_blank"
+              ><img src="assets/images/github_icon.png" alt="github icon"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/facundo-docampo-78580b1ba/"
+              target="_blank"
+              ><img src="assets/images/linkedin_icon.png" alt="linkedin icon"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/facundodocampo/" target="_blank"
+              ><img src="assets/images/instagram_icon.png" alt="instagram icon"
+            /></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
