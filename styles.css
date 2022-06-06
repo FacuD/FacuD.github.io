@@ -212,6 +212,7 @@ body {
 
 .contact .form textarea {
   height: auto;
+  width: 100%;
   grid-column-start: 1;
   grid-column-end: 3;
   background-color: #f4f4f4;
