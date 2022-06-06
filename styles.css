@@ -146,6 +146,8 @@ body {
   backface-visibility: hidden;
   image-rendering: -webkit-optimize-contrast;
   aspect-ratio: 1;
+  object-fit: cover;
+  object-position: top;
 }
 
 .hover-content {
